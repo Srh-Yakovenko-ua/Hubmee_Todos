@@ -1,6 +1,6 @@
 ## Authors:
 
-[![demo](https://img.shields.io/badge/-demo-brightgreen?style=for-the-badge&logo=github)](https://igor-tech.github.io/friday-project-cards/)
+[![demo](https://img.shields.io/badge/-demo-brightgreen?style=for-the-badge&logo=github)](https://hubmee-todos.vercel.app/)
 
 - [Srh-Yakovenko-ua](https://github.com/Srh-Yakovenko-ua)
 
