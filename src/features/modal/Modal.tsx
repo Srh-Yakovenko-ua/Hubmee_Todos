@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { ModalContent, ModalWrapper } from '../../common/components'
+import { ModalWrapper } from '../../common/components'
 import { useModalController } from '../../common/hooks'
+
+import { ModalContent } from './modal-content/ModalContent'
 
 export const Modal = () => {
   const { closeModal, header, isOpenType } = useModalController()
