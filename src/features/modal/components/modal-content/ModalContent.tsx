@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { useAppSelector } from '../../../app/store/store'
-import { openTypeSelector } from '../../../common/selectors'
+import { useAppSelector } from '../../../../app/store/store'
+import { openTypeSelector } from '../../../../common/selectors'
+import { MODAL_TYPE } from '../../modal-slice'
 import { DeleteTodoModal } from '../delete-todo-modal/DeleteTodoModal'
 import { EditTodoModal } from '../edit-todo-modal/EditTodoModal'
-import { MODAL_TYPE } from '../modal-slice'
 
 export const ModalContent = () => {
   const typeModal = useAppSelector(openTypeSelector)

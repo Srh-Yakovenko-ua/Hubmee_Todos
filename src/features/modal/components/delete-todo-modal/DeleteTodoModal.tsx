@@ -2,12 +2,12 @@ import React from 'react'
 
 import { Box, Typography } from '@mui/material'
 
-import { useAppDispatch, useAppSelector } from '../../../app/store/store'
-import { useModalController } from '../../../common/hooks'
-import { getTodoIdSelector } from '../../../common/selectors'
-import { CommonButton } from '../../../shared'
-import { deleteTodo } from '../../todos/todo-slice'
-import { buttonModalContainer, todoModalContainer } from '../common-modal.style'
+import { useAppDispatch, useAppSelector } from '../../../../app/store/store'
+import { useModalController } from '../../../../common/hooks'
+import { getTodoIdSelector } from '../../../../common/selectors'
+import { CommonButton } from '../../../../shared'
+import { deleteTodo } from '../../../todos/todo-slice'
+import { buttonModalContainer, todoModalContainer } from '../../common-modal.style'
 
 import { deleteButton } from './delete-todo-modal.style'
 
