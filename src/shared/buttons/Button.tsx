@@ -1,6 +1,13 @@
-import React, { FC, memo, KeyboardEvent, DetailedHTMLProps, ButtonHTMLAttributes, MouseEvent } from 'react';
+import React, {
+  FC,
+  memo,
+  KeyboardEvent,
+  DetailedHTMLProps,
+  ButtonHTMLAttributes,
+  MouseEvent,
+} from 'react'
 
-import { Button, ButtonProps, styled } from '@mui/material';
+import { Button, ButtonProps, styled } from '@mui/material'
 
 const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
   svg: {
@@ -18,15 +25,18 @@ const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
     },
     color: theme.palette.primary.contrastText,
   },
-}));
+}))
 
-type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+type DefaultButtonPropsType = DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
 type SuperButtonPropsType = DefaultButtonPropsType &
   ButtonProps & {
-    callback?: () => void;
-    onKeyDownCallBack?: () => void;
-    icon?: any;
-  };
+    callback?: () => void
+    onKeyDownCallBack?: () => void
+    icon?: any
+  }
 
 export const CommonButton: FC<SuperButtonPropsType> = memo(
   ({
@@ -41,16 +51,16 @@ export const CommonButton: FC<SuperButtonPropsType> = memo(
     ...restProps
   }) => {
     const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
-      event.stopPropagation();
-      callback?.();
-    };
+      event.stopPropagation()
+      callback?.()
+    }
 
     const handleKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
       if (event.key === 'Enter') {
-        event.stopPropagation();
-        onKeyDownCallBack?.();
+        event.stopPropagation()
+        onKeyDownCallBack?.()
       }
-    };
+    }
 
     return (
       <CustomButton
@@ -66,6 +76,6 @@ export const CommonButton: FC<SuperButtonPropsType> = memo(
       >
         {children}
       </CustomButton>
-    );
-  },
-);
+    )
+  }
+)

@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 
-import { Box } from '@mui/material';
-import { Controller } from 'react-hook-form';
+import { Box } from '@mui/material'
+import { Controller } from 'react-hook-form'
 
-import { useAppDispatch } from '../../../../app/store/store';
-import { addSchema, AddSchemaType } from '../../../../common/constants';
-import { useGlobalForm } from '../../../../common/hooks';
-import { CommonButton, Input } from '../../../../shared';
-import { addTodo } from '../../todo-slice';
+import { useAppDispatch } from '../../../../app/store/store'
+import { addSchema, AddSchemaType } from '../../../../common/constants'
+import { useGlobalForm } from '../../../../common/hooks'
+import { CommonButton, Input } from '../../../../shared'
+import { addTodo } from '../../todo-slice'
 
-import { addTaskContainer, addTaskInput } from './add-task.style';
+import { addTaskContainer, addTaskInput } from './add-task.style'
 
 export const AddTask = () => {
-  const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch()
 
-  const { handleSubmit, reset, errors, control } = useGlobalForm(addSchema, { text: '' });
+  const { handleSubmit, reset, errors, control } = useGlobalForm(addSchema, { text: '' })
 
   const addTodoSubmit = ({ text }: AddSchemaType) => {
     if (text) {
-      dispatch(addTodo(text));
-      reset();
+      dispatch(addTodo(text))
+      reset()
     }
-  };
+  }
 
   return (
     <form autoComplete="off" noValidate onSubmit={handleSubmit(addTodoSubmit)}>
@@ -52,5 +52,5 @@ export const AddTask = () => {
         </CommonButton>
       </Box>
     </form>
-  );
-};
+  )
+}

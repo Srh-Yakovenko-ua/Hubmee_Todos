@@ -8,15 +8,15 @@ export const todoItemWrapper = {
     cursor: 'pointer',
     borderRadius: '4px',
   },
-};
+}
 export const todoItemContainer = {
   display: 'flex',
   alignItems: 'center',
-};
+}
 export const todoItemTextContainer = {
   wordBreak: 'break-all',
   width: '300px',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
   whiteSpace: 'nowrap',
-};
+}

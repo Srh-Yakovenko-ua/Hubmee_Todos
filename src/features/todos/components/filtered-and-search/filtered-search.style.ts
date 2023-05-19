@@ -1,9 +1,9 @@
-import { useTheme } from '@mui/material';
+import { useTheme } from '@mui/material'
 
 export const useFilteredSearchStyle = () => {
-  const theme = useTheme();
+  const theme = useTheme()
 
-  const fillIcon = theme.palette.primary.main;
+  const fillIcon = theme.palette.primary.main
   const filteredButton = {
     color: theme.palette.text.primary,
     svg: {
@@ -15,18 +15,18 @@ export const useFilteredSearchStyle = () => {
       },
     },
     width: '87px',
-  };
+  }
 
-  return { fillIcon, filteredButton };
-};
+  return { fillIcon, filteredButton }
+}
 export const filteredBtn = {
   width: '87px',
-};
+}
 
 export const filteredSearchContainer = {
   display: 'flex',
   gap: '10px',
-};
+}
 export const searchInput = {
   width: '60%',
-};
+}

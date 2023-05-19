@@ -1,22 +1,22 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState } from 'react'
 
-import { EditOutlined } from '@mui/icons-material';
-import { Box, IconButton, ListItemIcon, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
+import { EditOutlined } from '@mui/icons-material'
+import { Box, IconButton, ListItemIcon, Menu, MenuItem, Tooltip, Typography } from '@mui/material'
 
-import { useModalController } from '../../../../common/hooks';
-import { MODAL_TYPE } from '../../../modal/modal-slice';
-import { Todo } from '../../todo-slice';
+import { useModalController } from '../../../../common/hooks'
+import { MODAL_TYPE } from '../../../modal/modal-slice'
+import { Todo } from '../../todo-slice'
 
-import { ReactComponent as DeleteIcon } from './../../../../common/assets/icon/hover.svg';
-import { ReactComponent as MenuIcon } from './../../../../common/assets/icon/more_vert.svg';
+import { ReactComponent as DeleteIcon } from './../../../../common/assets/icon/hover.svg'
+import { ReactComponent as MenuIcon } from './../../../../common/assets/icon/more_vert.svg'
 
 export const DropDownMenuTodo: FC<Pick<Todo, 'id'>> = ({ id }) => {
-  const { openModal } = useModalController();
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const { openModal } = useModalController()
+  const [anchorEl, setAnchorEl] = useState(null)
+  const open = Boolean(anchorEl)
 
-  const handleClick = (event: any) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
+  const handleClick = (event: any) => setAnchorEl(event.currentTarget)
+  const handleClose = () => setAnchorEl(null)
 
   return (
     <>
@@ -56,5 +56,5 @@ export const DropDownMenuTodo: FC<Pick<Todo, 'id'>> = ({ id }) => {
         </MenuItem>
       </Menu>
     </>
-  );
-};
+  )
+}

@@ -13,4 +13,3 @@
 - <img alt="Redux Persist" src="https://img.shields.io/badge/Redux Persist-593D88?style=for-the-badge&logo=redux&logoColor=white">
 - <img alt="Formik" src="https://img.shields.io/badge/React hook form/Yup-black?style=for-the-badge&logo=formik&logoColor=white">
 - <img alt="MaterialUI" src="https://img.shields.io/badge/Material UI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white">
-

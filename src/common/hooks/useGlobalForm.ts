@@ -1,5 +1,5 @@
-import { yupResolver } from '@hookform/resolvers/yup';
-import { FieldValues, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup'
+import { FieldValues, useForm } from 'react-hook-form'
 
 export const useGlobalForm = <T extends FieldValues>(schema: any, defaultValues?: any) => {
   const {
@@ -15,7 +15,7 @@ export const useGlobalForm = <T extends FieldValues>(schema: any, defaultValues?
     },
     mode: 'onChange',
     resolver: yupResolver(schema),
-  });
+  })
 
   return {
     register,
@@ -24,5 +24,5 @@ export const useGlobalForm = <T extends FieldValues>(schema: any, defaultValues?
     errors,
     setError,
     control,
-  };
-};
+  }
+}

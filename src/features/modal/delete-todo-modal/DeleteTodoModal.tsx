@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react'
 
-import { Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material'
 
-import { useAppDispatch, useAppSelector } from '../../../app/store/store';
-import { useModalController } from '../../../common/hooks';
-import { getTodoIdSelector } from '../../../common/selectors';
-import { CommonButton } from '../../../shared';
-import { deleteTodo } from '../../todos/todo-slice';
-import { buttonModalContainer, todoModalContainer } from '../common-modal.style';
+import { useAppDispatch, useAppSelector } from '../../../app/store/store'
+import { useModalController } from '../../../common/hooks'
+import { getTodoIdSelector } from '../../../common/selectors'
+import { CommonButton } from '../../../shared'
+import { deleteTodo } from '../../todos/todo-slice'
+import { buttonModalContainer, todoModalContainer } from '../common-modal.style'
 
-import { deleteButton } from './delete-todo-modal.style';
+import { deleteButton } from './delete-todo-modal.style'
 
 export const DeleteTodoModal = () => {
-  const { closeModal } = useModalController();
-  const dispatch = useAppDispatch();
-  const todoId = useAppSelector(getTodoIdSelector);
+  const { closeModal } = useModalController()
+  const dispatch = useAppDispatch()
+  const todoId = useAppSelector(getTodoIdSelector)
 
   const deleteTodoHandler = async () => {
-    await dispatch(deleteTodo({ todoId }));
-    closeModal();
-  };
+    await dispatch(deleteTodo({ todoId }))
+    closeModal()
+  }
 
   return (
     <Box sx={todoModalContainer}>
@@ -37,5 +37,5 @@ export const DeleteTodoModal = () => {
         </CommonButton>
       </Box>
     </Box>
-  );
-};
+  )
+}

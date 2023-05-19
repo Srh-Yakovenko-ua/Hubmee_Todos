@@ -1,15 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 
-import CloseIcon from '@mui/icons-material/Close';
-import { Box, Container, Divider, Typography, Modal } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close'
+import { Box, Container, Divider, Modal, Typography } from '@mui/material'
 
-import { closeExitIconSx, containerChildSx, dividerSx, titleModalContainerSx, titleModalSx } from './modal.style';
+import {
+  closeExitIconSx,
+  containerChildSx,
+  dividerSx,
+  titleModalContainerSx,
+  titleModalSx,
+} from './modal.style'
 
 interface ModalProps {
-  children: React.ReactNode;
-  header: string;
-  isOpen: boolean;
-  closeModal: () => void;
+  children: React.ReactNode
+  header: string
+  isOpen: boolean
+  closeModal: () => void
 }
 
 export const ModalWrapper: FC<ModalProps> = ({ closeModal, isOpen, header, children }) => {
@@ -35,5 +41,5 @@ export const ModalWrapper: FC<ModalProps> = ({ closeModal, isOpen, header, child
         )}
       </>
     </Modal>
-  );
-};
+  )
+}

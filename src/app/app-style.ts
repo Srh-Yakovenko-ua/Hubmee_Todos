@@ -4,4 +4,4 @@ export const appWrapper = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-};
+}

@@ -1,12 +1,12 @@
-import { createSelector } from '@reduxjs/toolkit';
+import { createSelector } from '@reduxjs/toolkit'
 
-import { RootState } from '../../app/store/store';
+import { RootState } from '../../app/store/store'
 
-export const getTodosSelector = (state: RootState) => state.todos.todos;
-export const selectFilterSelector = (state: RootState) => state.todos.filtered;
-export const searchTodosSelector = (state: RootState) => state.todos.searchTodos;
+export const getTodosSelector = (state: RootState) => state.todos.todos
+export const selectFilterSelector = (state: RootState) => state.todos.filtered
+export const searchTodosSelector = (state: RootState) => state.todos.searchTodos
 export const currentTodoSelector = (state: RootState, todoID: string) =>
-  state.todos.todos.find(todo => todo.id === todoID);
+  state.todos.todos.find(todo => todo.id === todoID)
 
 export const selectFilteredTodos = createSelector(
   getTodosSelector,
@@ -14,26 +14,26 @@ export const selectFilteredTodos = createSelector(
   searchTodosSelector,
   (todos, filter, searchTodos) => {
     if (searchTodos.length) {
-      const searchLowerCase = searchTodos.toLowerCase();
+      const searchLowerCase = searchTodos.toLowerCase()
 
       return todos.filter(todo => {
-        const todoTextLowerCase = todo.text.toLowerCase();
+        const todoTextLowerCase = todo.text.toLowerCase()
 
         if (filter === 'done') {
-          return todo.checkedStatus && todoTextLowerCase.includes(searchLowerCase);
+          return todo.checkedStatus && todoTextLowerCase.includes(searchLowerCase)
         } else {
-          return todoTextLowerCase.includes(searchLowerCase);
+          return todoTextLowerCase.includes(searchLowerCase)
         }
-      });
+      })
     }
 
     switch (filter) {
       case 'done': {
-        return todos.filter(todo => todo.checkedStatus);
+        return todos.filter(todo => todo.checkedStatus)
       }
       default: {
-        return todos;
+        return todos
       }
     }
-  },
-);
+  }
+)

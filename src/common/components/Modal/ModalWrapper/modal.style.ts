@@ -7,17 +7,18 @@ export const containerChildSx = {
   bgcolor: 'background.paper',
   border: '2px',
   boxShadow: 24,
-};
+  zIndex: 1000,
+}
 export const titleModalContainerSx = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-};
+}
 export const titleModalSx = {
   margin: '19px 0',
   fontWeight: '500',
   fontSize: '18px',
   lineHeight: '22px',
-};
-export const closeExitIconSx = { cursor: 'pointer' };
-export const dividerSx = { position: 'absolute', top: '60px', width: '100%', right: '-15px' };
+}
+export const closeExitIconSx = { cursor: 'pointer' }
+export const dividerSx = { position: 'absolute', top: '60px', width: '100%', right: '-15px' }
