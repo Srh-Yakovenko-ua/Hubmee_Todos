@@ -1,3 +1,3 @@
-export const deleteNoButton = {
-  width: '87px',
+export const deleteButton = {
+  width: '120px',
 };

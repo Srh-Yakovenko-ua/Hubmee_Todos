@@ -9,7 +9,7 @@ import { CommonButton } from '../../../shared';
 import { deleteTodo } from '../../todos/todo-slice';
 import { buttonModalContainer, todoModalContainer } from '../common-modal.style';
 
-import { deleteNoButton } from './delete-todo-modal.style';
+import { deleteButton } from './delete-todo-modal.style';
 
 export const DeleteTodoModal = () => {
   const { closeModal } = useModalController();
@@ -29,10 +29,10 @@ export const DeleteTodoModal = () => {
         </Typography>
       </Box>
       <Box sx={buttonModalContainer}>
-        <CommonButton callback={deleteTodoHandler} color="error">
+        <CommonButton callback={deleteTodoHandler} color="error" sx={deleteButton}>
           Yes
         </CommonButton>
-        <CommonButton callback={closeModal} variant="outlined" sx={deleteNoButton}>
+        <CommonButton callback={closeModal} variant="outlined" sx={deleteButton}>
           No
         </CommonButton>
       </Box>

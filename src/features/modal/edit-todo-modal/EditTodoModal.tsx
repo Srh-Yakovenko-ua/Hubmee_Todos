@@ -56,7 +56,7 @@ export const EditTodoModal = () => {
             ...commonFullWidth,
           }}
         >
-          <CommonButton variant="outlined" type="submit" sx={editButtonModal}>
+          <CommonButton variant="contained" type="submit" sx={editButtonModal}>
             Edit
           </CommonButton>
           <CommonButton variant="outlined" callback={closeModal} sx={editButtonModal}>
